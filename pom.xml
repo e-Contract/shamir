@@ -4,7 +4,7 @@
     <name>Shamir's Secret Sharing Project</name>
     <groupId>be.e-contract</groupId>
     <artifactId>shamir</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <inceptionYear>2019</inceptionYear>
     <organization>
         <name>e-Contract.be BVBA</name>
@@ -64,7 +64,7 @@
     </properties>
     <scm>
         <connection>scm:git:e-contract.be:git/shamir.git</connection>
-        <tag>shamir-1.0.0</tag>
+        <tag>HEAD</tag>
     </scm>
     <distributionManagement>
         <downloadUrl>https://www.e-contract.be/maven2/be/e-contract/shamir/</downloadUrl>
