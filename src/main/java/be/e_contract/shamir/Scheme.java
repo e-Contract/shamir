@@ -20,8 +20,6 @@ import java.security.SecureRandom;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
-import java.util.StringJoiner;
 
 /**
  * An implementation of Shamir's Secret Sharing over {@code GF(256)} to securely split secrets into
@@ -166,32 +164,6 @@ public class Scheme {
    */
   public int k() {
     return k;
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
-    }
-    if (!(o instanceof Scheme)) {
-      return false;
-    }
-    final Scheme scheme = (Scheme) o;
-    return n == scheme.n && k == scheme.k && Objects.equals(random, scheme.random);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(random, n, k);
-  }
-
-  @Override
-  public String toString() {
-    return new StringJoiner(", ", Scheme.class.getSimpleName() + "[", "]")
-        .add("random=" + random)
-        .add("n=" + n)
-        .add("k=" + k)
-        .toString();
   }
 
   private static void checkArgument(boolean condition, String message) {
